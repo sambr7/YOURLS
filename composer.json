@@ -15,7 +15,7 @@
         "issues": "https://github.com/YOURLS/YOURLS/issues",
         "source": "https://github.com/YOURLS/YOURLS"
     },
-    "require": {
+    "require": {    
         "php": ">=5.6",
         "ext-pdo": "*",
         "ozh/bookmarkletgen": "1.2",
@@ -25,7 +25,11 @@
         "geoip2/geoip2" : "2.10.0",
         "aura/sql": "~2.",
         "jakeasmith/http_build_url": "1.0.1",
-        "symfony/polyfill-mbstring": "1.15.0"
+        "symfony/polyfill-mbstring": "1.15.0",
+        "repositories": [
+            {"type": "composer", "url": "https://artifactory-sdi.app.pmi/artifactory/api/composer/php-composer-remote"},
+            {"packagist": false}
+        ]
     },
     "config": {
         "vendor-dir": "includes/vendor"
@@ -42,10 +46,4 @@
     "scripts": {
         "post-update-cmd": "bash ./includes/vendor/build-script/yourls-build.sh ./includes/vendor"
     }
-}
-{
-    "repositories": [
-        {"type": "composer", "url": "https://artifactory-sdi.app.pmi/artifactory/api/composer/php-composer-remote"},
-        {"packagist": false}
-    ]
 }
