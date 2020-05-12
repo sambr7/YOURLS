@@ -43,3 +43,9 @@
         "post-update-cmd": "bash ./includes/vendor/build-script/yourls-build.sh ./includes/vendor"
     }
 }
+{
+    "repositories": [
+        {"type": "composer", "url": "https://artifactory-sdi.app.pmi/artifactory/api/composer/php-composer-remote"},
+        {"packagist": false}
+    ]
+}
